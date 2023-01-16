@@ -82,6 +82,23 @@ const sortedByYearsLived = inventors.sort(function(a, b) {
 });
 // console.log(sortedByYearsLived);
 
-//6. 
+//6. Create a list of boulevards in Paris that contain "de" anywhere in the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+/* const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+const de = links
+                .map(link => link.textContent)
+                .filter(streetName => streetName.includes("de")); */
+// console.log(de);
 
+//7. Sort Exercise: To sort the people alhabetically by last name
+const nameSort = people.sort(function(lastOne, nextOne) {
+    const parts = lastOne.split(", "); //This splits the names in an array using the ", "(comma & whitespace) and puts the splitted items in an array as two separate elements excluding the comma and whitespace.
+    const [aLast, aFirst] = lastOne.split(", "); //This destructures the array "parts" above.What this means is since its a 2-element array, you can assign the two elements to a variable by doing [variableName1, variableName2].
+    const [bLast, bFirst] = nextOne.split(", ");
+    return aLast > bLast ? 1 : -1;
+});
+// console.log(nameSort);
+
+//8. continue from 20:08
 
