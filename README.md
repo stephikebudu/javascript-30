@@ -14,3 +14,6 @@ This project uses the prowess of flexbox to create a beautiful gallery of the se
 
 ### 06 Search Feature
 This project applies the concepts of Regex, `fetch()`, `then()`, `replace()` & JavaScript template literals to build a search component for cities and states.
+
+### 07 More Array Manipulation
+This project basically applies `some()`, `every()`, `find()` & `splice()` to perform tasks on arrays.
