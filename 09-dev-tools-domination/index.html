@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Tip: Click on the element in dev console >> select break on in menu drop-down >> select attribute modification to highlight what is taking effect on your element
+
+    // Regular
+    console.log('hello');
+    console.table(dogs);
+    
+    // Interpolated
+    // console.log(`Hello I am ${var}`);
+
+    // Styled
+    // console.log('%c I can be styled', font-size: 50px, color: red);
+
+    // warning!
+    console.warn('Uh-oh!');
+
+    // Error :|
+    console.error("Something's Wrong!");
+
+    // Info
+    console.info("Steph is a master JS developer");
+
+    // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains("ouch"), false);
+
+    // clearing
+    console.clear();
+
+    // Viewing DOM Elements
+    console.dir(p);
+    // Grouping together by dog name using console.groupEnd
+    dogs.forEach(dog => {
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(${dog.name});
+    })
+    // counting how many times youve logged Wes
+    console.count('Wes');
+
+    // timing with console.time usually used with something that takes time. It shows how long the process takes
+    console.time();
+
+  </script>
+</body>
+</html>
